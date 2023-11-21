@@ -37,4 +37,10 @@ app.use('/api/v1',payment)
 
 export default app
 
+app.get("/", (req, res) =>
+  res.send(
+    `<h1>Working. click on this <a href=${process.env.FRONTEND_URL}>here</a> to visit frontend.</h1>`
+  )
+);
+
 app.use(ErrorMiddleware)
